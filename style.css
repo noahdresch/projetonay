@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;   
+}
+
+.cabecalho {
+    background-color: #141414;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cabecalho nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.banner {
+    position: relative;
+    background: url(./img/fotos/foto16.png) no-repeat center center/cover;
+    padding: 120px 1rem 2rem;
+    background-size: cover;
+}
+
+.banner::after {
+    content: '';
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.8));
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.conteudo { position: relative; 
+    color: white; 
+    z-index: 2; 
+}
+
+.titulo { 
+    font-family: "Great Vibes", cursive; 
+    font-size: 40px; 
+    margin: 0; 
+}
+
+.detalhes { margin: 10px 0; 
+    font-size: 12px; 
+    color: #ccc; 
+}
+
+.descricao { font-size: 14px; 
+    line-height: 1.2; 
+}
+
+.botoes { 
+    margin-top: 20px; 
+}
+
+.botoes button {
+    background: #fff;
+    color: black;
+    border: none;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.momentos { 
+    padding: 1.5rem 1rem; 
+}
+
+.momentos h2 { 
+    margin-bottom: 1rem; 
+    font-size: 20px; 
+}
+
+/* Swiper base */
+.swiper { 
+    width: 100%; 
+    padding-bottom: 20px; 
+}
+
+.swiper-slide { /* mantém como estava */
+    width: auto !important; 
+}
+
+/* ---- Dimensão padrão (VERTICAL) para sections 1 e 3 ---- */
+.momentos:not(.momentos--horizontal) .swiper-slide img {
+    display: block;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+/* ---- Apenas SECTION 2 (HORIZONTAL) ---- */
+.momentos.momentos--horizontal .swiper-slide img {
+    display: block;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+/* Responsivo (opcional) */
+@media (min-width: 900px){
+    .momentos:not(.momentos--horizontal) .swiper-slide img {
+        width: 600px;
+        height: 900px;
+    }
+    .momentos.momentos--horizontal .swiper-slide img {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+footer {
+    background-color: #0a0a0a;
+    padding: 1rem;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.contador-flip {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+.contador-flip h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.flip-clock {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+    background-color: #1c1c1c;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    width: 70px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    position: relative;
+    box-shadow: 0 0 15px rgba(229,9,20,0.5);
+    transition: transform 0.3s;
+}
+
+.flip-card small {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 5px;
+}
